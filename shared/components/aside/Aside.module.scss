@@ -1,0 +1,37 @@
+.aside {
+  @apply flex flex-col justify-start items-start px-6 py-4 bg-white min-h-screen w-2/12 shadow-md;
+  &__avatar {
+    @apply flex mb-16 mt-8 justify-center items-center;
+    &_image {
+      @apply relative;
+      width: 50px;
+      height: 50px;
+      & img {
+        @apply rounded-full;
+      }
+    }
+    & p {
+      @apply ml-2
+    }
+  }
+  &__menu {
+    @apply flex flex-col p-0 gap-4;
+    &_group {
+      @apply flex flex-col;
+      & h4 {
+        @apply text-lg font-bold;
+      }
+    }
+    &_item {
+      @apply flex justify-center items-center p-5 text-base pl-4;
+      & p {
+        @apply ml-2
+      }
+    }
+  }
+  &__box {
+    @apply relative;
+    width: 50px;
+    height: 50px;
+  }
+}
