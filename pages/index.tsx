@@ -1,26 +1,31 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import Aside from "../shared/components/aside/Aside";
-import styles from "../styles/Home.module.scss";
+import { Layout } from "../shared/components/layout/";
+
+
+
+
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>BudgetITProject</title>
-        <meta name="description" content="App to create budget IT projects" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout title='Freelo Budget'>
+      <div className="projects">
+        <div className="projects__filters flex w-full justify-center mb-4">
+          <input type="text" className="p-2 w-8/12 rounded-r-none rounded-b-none rounded-t-md rounded-l-md" />
+          <div className="projects__buttons">
+            
+          </div>
+        </div>
+        <div className="projects__results">
+          <div className="projects__item">
 
-      <div className="flex ">
-        <Aside />
-        <main className="p-10 px-20 mx-auto my-0">
-            <h1>hola</h1>
-        </main>
+          </div>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
 export default Home;
+
+
+

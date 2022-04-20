@@ -22,7 +22,7 @@
         @apply text-lg font-bold;
       }
     }
-    &_item {
+    &_item {    
       @apply flex justify-center items-center p-5 text-base pl-4;
       & p {
         @apply ml-2

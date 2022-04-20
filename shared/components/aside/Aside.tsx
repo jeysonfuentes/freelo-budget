@@ -30,7 +30,7 @@ const menu = [
   },
 ];
 
-function Aside(props: any) {
+export const Aside = (props: any) =>  {
   return (
     <aside className={styles.aside}>
       <div className={styles.aside__avatar}>
@@ -80,4 +80,4 @@ function Aside(props: any) {
   );
 }
 
-export default Aside;
+
