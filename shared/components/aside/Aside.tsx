@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import styles from "./Aside.module.scss";
 import Link from "next/link";
-
+import { PrimeIcons } from 'primereact/api';
 const menu = [
   {
     title: "Gestión",
@@ -13,7 +13,7 @@ const menu = [
       {
         title: "Proyectos",
         url: "projects",
-        icon: "",
+        icon: PrimeIcons.BRIEFCASE,
       },
     ],
   },
@@ -24,7 +24,7 @@ const menu = [
       {
         title: "Aplicación",
         url: "application",
-        icon: "",
+        icon: PrimeIcons.COG,
       },
     ],
   },
@@ -36,7 +36,7 @@ export const Aside = (props: any) =>  {
       <div className={styles.aside__avatar}>
         <div className={styles.aside__avatar_image}>
           <Image
-            src={"https://via.placeholder.com/100"}
+            src={"/img/avatar2.jpg"}
             alt={"avatar image"}
             className="rounded-full"
             width={"100%"}
@@ -57,14 +57,7 @@ export const Aside = (props: any) =>  {
                     <Link  href={`${group.url}/${item.url}`} key={item.title}>
                       <li className={styles.aside__menu_item}>
                         <div className={styles.aside__box}>
-                          <Image
-                            src={"https://via.placeholder.com/50"}
-                            alt={"image item"}
-                            className="rounded-full"
-                            width={"100%"}
-                            height={"30"}
-                            layout="fill"
-                          />
+                          <i className={item.icon}></i>
                         </div>
                         <p>{item.title}</p>
                       </li>

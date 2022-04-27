@@ -1,37 +1,50 @@
+@import 'primeflex/primeflex.scss';
+
 .aside {
-  @apply flex flex-col justify-start items-start px-6 py-4 bg-white min-h-screen w-2/12 shadow-md;
+  @include styleclass("flex flex-column justify-content-start align-items-start px-6 py-4 bg-white min-h-screen w-3 shadow-3");
   &__avatar {
-    @apply flex mb-16 mt-8 justify-center items-center;
+    @include styleclass("flex mb-4 mt-2 justify-content-center align-items-center");
     &_image {
-      @apply relative;
+      @include styleclass("relative");
       width: 50px;
       height: 50px;
       & img {
-        @apply rounded-full;
+        @include styleclass("border-circle");
       }
     }
     & p {
-      @apply ml-2
+      @include styleclass("ml-2")
     }
   }
   &__menu {
-    @apply flex flex-col p-0 gap-4;
+    @include styleclass("flex flex-column p-0 mt-3");
+    gap: 1rem;
     &_group {
-      @apply flex flex-col;
+      @include styleclass("flex flex-column");
       & h4 {
-        @apply text-lg font-bold;
+        @include styleclass("text-lg font-bold m-0");
+      }
+      & ul {
+        @include styleclass("p-0 pl-1")
       }
     }
     &_item {    
-      @apply flex justify-center items-center p-5 text-base pl-4;
+      @include styleclass("flex justify-content-center align-items-center p-5 text-base pl-1");
       & p {
-        @apply ml-2
+        @include styleclass("ml-2")
       }
     }
   }
   &__box {
-    @apply relative;
+    @include styleclass("border-circle bg-green-300 p-0 flex justify-content-center align-items-center");
     width: 50px;
     height: 50px;
+    
+    & i {
+      @include styleclass("text-white")
+      
+
+    }
+    
   }
 }
