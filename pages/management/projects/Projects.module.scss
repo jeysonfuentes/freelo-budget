@@ -6,9 +6,21 @@
 
 .projects {
   @include styleclass("flex flex-column");
-  
+  &__header {
+    @include styleclass("flex p-0 w-full justify-content-between align-items-center align-content-center mb-4");
+    &_title {
+      @include styleclass("flex justify-content-center align-items-center align-content-center text-primary");
+      gap: 1rem;
+      & h4 {
+        @include styleclass("m-0 text-3xl")
+      }
+      & i {
+        @include styleclass("text-2xl")
+      }
+    }
+  }
   &__search {
-    @include styleclass("flex w-full justify-center mb-2");
+    @include styleclass("flex w-full justify-content-between mb-2");
     gap: 1rem;
   }
   &__input_search {

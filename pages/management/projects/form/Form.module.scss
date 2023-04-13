@@ -1,0 +1,175 @@
+@import "primeflex/primeflex.scss";
+
+.project {
+  @include styleclass("flex flex-column m-0 p-0");
+  &__header {
+    @include styleclass("w-100");
+    & div {
+      & span {
+        & input {
+          @include styleclass("w-100");
+        }
+      }
+    }
+  }
+  &__configuration {
+    @include styleclass("flex flex-column");
+    &_content {
+      @include styleclass("grid align-items-stretch align-content-stretch");
+    }
+    &_input {
+      @include styleclass(
+        "flex justify-content-between align-items-center mb-2 w-full"
+      );
+      gap: 1rem;
+    }
+    &_wrapper {
+      @include styleclass("w-4");
+    }
+  }
+  &__totals {
+    @include styleclass("flex flex-column");
+    &_content {
+      @include styleclass("flex justify-content-between");
+      gap: 1rem;
+    }
+    &_time {
+      @include styleclass("border-2 border-primary");
+      & ul {
+        @include styleclass("flex justify-content-between list-none px-2");
+        gap: 1rem;
+        & li {
+          @include styleclass("text-center");
+        }
+      }
+    }
+    &_cost {
+      @include styleclass("border-2 border-primary");
+      & ul {
+        @include styleclass("flex justify-content-between list-none px-2");
+        gap: 1rem;
+        & li {
+          @include styleclass("text-center");
+        }
+      }
+    }
+  }
+  &__result {
+    &_item {
+      &_value {
+        @include styleclass("text-blue-600");
+        margin: 0;
+        font-size: 2rem;
+        &_success {
+          @include styleclass("text-green-500");
+        }
+        &_danger {
+          @include styleclass("text-red-500");
+        }
+      }
+      &_title {
+        margin: 0;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__requirements {
+    @include styleclass("flex flex-column");
+    &_content {
+      @include styleclass("flex flex-column justify-content-center");
+      & ul {
+        @include styleclass("flex justify-content-between list-none px-2");
+        gap: 1rem;
+      }
+      & button {
+        @include styleclass("align-self-center")
+      }
+    }
+  }
+  &__requirement {
+    @include styleclass(
+      "grid shadow-2 w-full justify-content-around align-items-baseline bg-white px-3 py-2"
+    );
+    &_title {
+      @include styleclass(
+        "col-4 flex gap-1 justify-content-around align-self-center"
+      );
+      & span {
+        @include styleclass(
+          "border-1 border-primary border-round p-3 bg-blue-200"
+        );
+        font-style: italic;
+      }
+      & input {
+        @include styleclass("w-9");
+      }
+    }
+    &_hour {
+      @include styleclass("col-2");
+      & ul {
+        @include styleclass("flex flex-column w-full");
+        & li {
+          @include styleclass("w-7");
+          & input {
+            @include styleclass("w-full");
+          }
+        }
+      }
+    }
+    &_effort {
+      @include styleclass("col-2");
+      & ul {
+        @include styleclass("flex flex-column w-full");
+      }
+    }
+    &_cost {
+      @include styleclass("col-2");
+      & ul {
+        @include styleclass("flex flex-column w-full");
+        & li {
+          & p {
+            margin: 0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1rem;
+          }
+          & h3 {
+            margin: 0;
+            font-size: 1.3em;
+            text-align: center;
+          }
+        }
+      }
+    }
+    &_totals {
+      @include styleclass(
+        "col-2 align-self-center flex flex-column gap-3 justify-content-around"
+      );
+      &_hours {
+        @include styleclass("flex flex-column w-full mb-3");
+        & p {
+          margin: 0;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+          & span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+      &_cost {
+        @include styleclass("flex flex-column w-full");
+        & p {
+          margin: 0;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 600;
+          & span {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}

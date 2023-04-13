@@ -29,14 +29,14 @@
       }
     }
     &_item {    
-      @include styleclass("flex justify-content-center align-items-center p-5 text-base pl-1");
+      @include styleclass("flex justify-content-center align-items-center p-5 text-base pl-1 cursor-pointer");
       & p {
         @include styleclass("ml-2")
       }
     }
   }
   &__box {
-    @include styleclass("border-circle bg-green-300 p-0 flex justify-content-center align-items-center");
+    @include styleclass("border-circle bg-secondary p-0 flex justify-content-center bg-primary align-items-center");
     width: 50px;
     height: 50px;
     

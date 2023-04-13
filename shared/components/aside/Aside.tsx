@@ -54,7 +54,7 @@ export const Aside = (props: any) =>  {
               <ul>
                 {group.items.map((item) => {
                   return (
-                    <Link  href={`${group.url}/${item.url}`} key={item.title}>
+                    <Link  href={`/${group.url}/${item.url}`} key={item.title} passHref>
                       <li className={styles.aside__menu_item}>
                         <div className={styles.aside__box}>
                           <i className={item.icon}></i>
